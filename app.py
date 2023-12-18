@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-from apikey import apikey
+#from apikey import apikey
 from langchain.vectorstores import FAISS
 from langchain.document_loaders import TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -20,7 +20,9 @@ st.markdown(
 # Sidebar inputs
 #apikey = st.sidebar.text_input("Please input the API_KEY:", type='password')
 # Set the environment variable
-os.environ['OPENAI_API_KEY'] = apikey
+
+api_key = os.environ.get('API_KEY')
+os.environ['OPENAI_API_KEY'] = api_key 
 
 # New dropdown for matching options
 matching_option = st.sidebar.selectbox("Matching", ["Company Matching", "Funds Matching", "Solution Matching"])
