@@ -1,4 +1,6 @@
-﻿langchain
+
+langchain-community
+langchain
 openai
 pandasai==0.2.15
 pdfplumber
