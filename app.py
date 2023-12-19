@@ -37,19 +37,15 @@ if matching_option == "Company Matching":
     default_columns = ['name_EN', 'introduction_EN', 'product_EN', 'website','country_region']
     
     
-    
-elif matching_option == "Funds Matching":
-    db = FAISS.load_local("index_funds", OpenAIEmbeddings())
-    df = pd.read_csv("3_investor.csv")
-    default_columns = ['INVESTOR', '英文名称', '主要投资领域','管理规模(记录币种)', '品牌介绍','机构官网']
-    
-    
+#elif matching_option == "Funds Matching":
+#    db = FAISS.load_local("index_funds", OpenAIEmbeddings())
+#    df = pd.read_csv("3_investor.csv")
+#    default_columns = ['INVESTOR', '英文名称', '主要投资领域','管理规模(记录币种)', '品牌介绍','机构官网']
+       
 elif matching_option == "Solution Matching":
     db = FAISS.load_local("index_solutions", OpenAIEmbeddings())
     df = pd.read_csv("2_solutions.csv")
     default_columns = ['Title', 'web_content', 'Link', 'Institute']
-
-
 
 # Columns to select for display
 all_columns = df.columns.tolist()
