@@ -21,8 +21,8 @@ st.markdown(
 #apikey = st.sidebar.text_input("Please input the API_KEY:", type='password')
 # Set the environment variable
 
-api_key = os.environ.get('API_KEY')
-os.environ['OPENAI_API_KEY'] = api_key 
+#api_key = os.environ.get('API_KEY')
+#os.environ['OPENAI_API_KEY'] = api_key 
 
 # New dropdown for matching options
 matching_option = st.sidebar.selectbox("Matching", ["Company Matching", "Funds Matching", "Solution Matching"])
